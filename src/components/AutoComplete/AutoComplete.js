@@ -64,7 +64,7 @@ export class AutoComplete extends Component {
     }
 
     _deleteChip = (e, user) => {
-        console.log(e.stopPropagation());
+        e.stopPropagation();
 
         const { selectedUserList } = this.state
         this.setState({
@@ -72,6 +72,7 @@ export class AutoComplete extends Component {
             hideSuggestionList: true,
             search: ''
         });
+
         this.searchInputRef.current.blur();
     }
 
@@ -80,7 +81,7 @@ export class AutoComplete extends Component {
             <div className={["auto-complete-container", !this.state.hideSuggestionList ? 'focus' : ''].join(' ')} >
                 {this.state.selectedUserList.map((user, i) => <Chip key={i} onClose={this._deleteChip} user={user}></Chip>)}
 
-                <div  tabIndex="0" onFocus={this.toggleList(false)} className="input-container">
+                <div tabIndex="0" onFocus={this.toggleList(false)} className="input-container">
                     <input placeholder="Search..." ref={this.searchInputRef} type="text" className="search-input" onChange={this.updateSearch} value={this.state.search} />
 
                     {!this.state.hideSuggestionList &&
