@@ -1,0 +1,28 @@
+.chip {
+    display: inline-block; 
+    background-color: #dfdfda;
+    border-radius: 50px;
+    font-size: 14px;
+    margin-right: 4px;
+}
+
+.chip * {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.chip-icon {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.user-name{
+    padding-left: 8px;
+}
+
+.close-icon {
+    padding: 0 8px;
+    cursor: pointer;
+}

@@ -1,0 +1,35 @@
+.auto-complete-container {
+    border-bottom: 2px solid gray;
+    padding: 2px;
+}
+
+.auto-complete-container.focus {
+    border-bottom: 2px solid blue;
+}
+
+.search-input {
+    border: none;
+    outline: none;
+    padding: 4px;
+    font-size: 14px;
+    display: inline-block;
+}
+
+.input-container {
+    position: relative;
+    display: inline-block;
+}
+
+.input-container:focus,
+.suggestion-list:focus {
+    outline: none;
+}
+
+.suggestion-list {
+    position: absolute;
+    width: 400px;
+    top: calc(100% + 4px);
+    left: 0;
+    z-index: 1;
+    box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.15);
+}
